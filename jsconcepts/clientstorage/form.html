@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <!-- CSS only -->
+    <link rel="stylesheet" href="../bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+   
+    <!-- Include Dexie -->
+<script src="https://unpkg.com/dexie@latest/dist/dexie.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand" href="index.html">Client Storage- <strong>IndexedDB</strong></a>
+    </nav>
+    <div class="container mt-60">
+        <form class="new-contact">
+            <div class="form-group">
+                <label for="name">Enter your first name:</label>
+                <input type="text" class="form-control" required id="firstName" required>
+            </div>
+            <div class="form-group">
+                    <label for="name">Enter your last name:</label>
+                    <input type="text" class="form-control" required id="lastName" required>
+                </div>
+           
+            <button type="submit" class="btn btn-primary" id="addName">New Contact</button>
+
+        </form>
+        <section class="contacts">
+            <ul>
+
+            </ul>
+        </section>
+    </div>
+</body>
+
+</html>
+<script src="indexeddb.js"></script>

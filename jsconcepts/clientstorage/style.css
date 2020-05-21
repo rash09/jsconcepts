@@ -1,0 +1,52 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+p {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.mt-60 {
+    margin-top: 60px;
+}
+
+.mt-20 {
+    margin-top: 20px;
+}
+
+.mt-10 {
+    margin-left: 5px;
+}
+
+.alert-light {
+    display: none;
+}
+
+.contacts{
+    background-color: dimgray;
+    margin-top:20px;
+    border: 1px solid ghostwhite
+}
+ul{
+    list-style-type: none;
+    margin:0;
+    padding:0;
+}
+li{
+    border-bottom: 1px solid ghostwhite;
+    padding:5px 0;
+    text-indent: 10px;
+
+}
+li:last-child{
+    border:none
+}
+
+.contacts button{
+    margin:10px 0 10px 10px ;
+
+}

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Client-Storage</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <!-- CSS only -->
+    <link rel="stylesheet" href="../bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand" href="#">Client Storage</a>
+    </nav>
+    <div class="container mt-60">
+        <div class="row">
+            <div class="col">
+                <div class="card text-white bg-secondary mb-3">
+                    <div class="card-header">Local Storage</div>
+                    <div class="card-body">
+
+                        <p class="card-text">
+                            LocalStorage is a Storage object, it inherits from the StoragePrototype that has methods and
+                            property:<br />
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">setItem</li>
+                                <li class="list-group-item">getItem</li>
+                                <li class="list-group-item">removeItem</li>
+                                <li class="list-group-item">length</li>
+                                <li class="list-group-item">key</li>
+                                <li class="list-group-item">clear</li>
+                            </ul>
+                        </p>
+                        <p class="text-info">
+                            Local storage blocks the DOM on browsers (Chrome, Firefox, Edge) while writing data.<br />
+                            In Safari browser, large data update might lead to permanent browser freeze
+                        </p>
+                    </div>
+                    <div class="card-footer text-muted">
+                        <div class="form-group">
+                            <label for="localVal">Set Local storage value</label>
+                            <input type="text" class="form-control" id="localVal" placeholder="Local storage value">
+                        </div>
+                        <button type="button" class="btn btn-primary" onclick="setlocal()">Set
+                            Localstorage Value</button>
+                        <button type="button" class="btn btn-secondary mt-10" id="getLocal" onclick="getlocal(this)">Get
+                            Localstorage Value</button>
+                        <div class="alert alert-dismissible alert-light mt-20">
+                            <p id="local-storage"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card text-white bg-secondary mb-3">
+                    <div class="card-header">Session Storage</div>
+                    <div class="card-body">
+
+                        <p class="card-text">
+                            Data stored in sessionStorage have an expiration time. this means that sessionStorage data
+                            is cleared when the page session ends.
+                            A page session is held during the lifetime of a tab. , it inherits from the StoragePrototype
+                            that has methods and
+                            property:<br />
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">setItem</li>
+                                <li class="list-group-item">getItem</li>
+                                <li class="list-group-item">removeItem</li>
+                                <li class="list-group-item">length</li>
+                                <li class="list-group-item">key</li>
+                                <li class="list-group-item">clear</li>
+                            </ul>
+                        </p>
+                        <p class="text-info">
+                                Local storage blocks the DOM on browsers (Chrome, Firefox, Edge) while writing data.<br />
+                                In Safari browser, large data update might lead to permanent browser freeze
+                        </p>
+                    </div>
+                    <div class="card-footer text-muted">
+                        <div class="form-group">
+                            <label for="sessionVal">Set Session storage value</label>
+                            <input type="text" class="form-control" id="sessionVal" placeholder="Session storage value">
+                        </div>
+                        <button type="button" class="btn btn-primary" onclick="setsession()">Set
+                            Sessionstorage Value</button>
+                        <button type="button" class="btn btn-secondary mt-10" id="getSession"
+                            onclick="getsession(this)">Get Session storage Value</button>
+                        <div class="alert alert-dismissible alert-light mt-20 ">
+
+                            <p id="session-storage"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="card text-white bg-secondary mb-3">
+                    <div class="card-header">IndexedDB</div>
+                    <div class="card-body">
+
+                        <p class="card-text">
+                            IndexedDB formerly known as WebSimpleDB the Indexed Database API and uses the concept of an object store for client side data. A asynchronous API.<br />
+                            
+                        </p>
+                        <p class="text-info">
+                                In Firefox & Chrome, IndexedDB is much slower than Localstorage for insertion operation.<br />
+                                Works fine in Safari & Edge without any interuption.<br/>
+                                Safari doesnt support IndexedDB inside a web worker.
+                        </p>
+                    </div>
+                    <div class="card-footer text-muted">
+                      
+                        <a href="form.html" onclick="setindex()">Check IndexedDB</a>
+                      
+                        
+                    </div>
+                </div>
+            </div>
+           
+        </div>
+    </div>
+</body>
+
+</html>
+<script src="webstorage.js"></script>
